@@ -1,0 +1,27 @@
+{
+  "name": "freezing-octo-meme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crownsocial/freezing-octo-meme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crownsocial/freezing-octo-meme/issues"
+  },
+  "homepage": "https://github.com/crownsocial/freezing-octo-meme",
+  "dependencies": {
+    "body-parser": "^1.12.2",
+    "ejs": "^2.3.1",
+    "express": "^4.12.3",
+    "pg": "^4.3.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^2.0.5"
+  }
+}
