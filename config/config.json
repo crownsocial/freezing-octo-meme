@@ -1,17 +1,20 @@
 {
   "development": {
     "database": "movie_no_2",
+    "use_env_variable": "DATABASE_URL",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
 
     "database": "movie_no_2",
+    "use_env_variable": "DATABASE_URL",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
     "database": "movie_no_2",
+    "use_env_variable": "DATABASE_URL",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
