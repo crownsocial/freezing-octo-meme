@@ -36,15 +36,15 @@ app.get("/", function(req, res) {
 //   res.send("Hello!");
 // });
 
-  db.movie.create({movieTitle: "THISHAPPENED"}).then(function(createdUser) {
+  db.movie.create({movieTitle: "IN HEROKU"}).then(function(createdUser) {
   // console.log("this user was just create: ", user.firstName);
   // createdUser.lastName = "Bridgpal"
   // createdUser.save();
-  createdUser.set("date", "INSIDETHEFUNCTION").save();
+  createdUser.set("date", "ININSIDE HEROK ZACH").save();
   // res.render("someTemplate", {user: user});
 });
 
-db.movie.findOrCreate({where: {movieTitle: "SPECIALSPACEMAN"}})
+db.movie.findOrCreate({where: {movieTitle: "HEROKUgitACEMAN"}})
 .spread(function(foundUser, created) {
   console.log(foundUser.get());
   console.log(created);
