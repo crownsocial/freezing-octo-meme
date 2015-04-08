@@ -1,0 +1,32 @@
+
+
+<% include ../partials/header %>
+<h1>OMDB Search</h1>
+<!-- Here are the movies btw: -->
+<div class="col-sm-4">
+<table class="table">
+
+<% for (var i=0;i<Search.length;i++) { %>
+<tr>
+    <td>
+      <a href="movies/<%= Search[i].imdbID %>"> <%= Search[i].Title %>
+      </a></td>
+      <td> <%= Search[i].Year; %> </td>
+    </td>
+</tr>
+
+
+<% } %>
+
+
+</table>
+
+<!-- <form class="form" action="/movies" method="get">
+<div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="search for a movie">
+  </div>
+  <input type="submit" value="search" class="btn btn-primary">
+  </form> -->
+</div>
+
+<% include ../partials/footer %>
