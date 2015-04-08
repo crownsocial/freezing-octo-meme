@@ -2,6 +2,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var moviesCtrl = require("./controllers/movies");
+var favoritesCtrl = require("./controllers/favorites");
 var db = require("./models");
 var router = express.Router();
 //dependency for scraping sites
@@ -28,6 +29,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 // app.use('/articles',require('./controllers/articles.js'));
 
 app.use("/movies", moviesCtrl);
+app.use("/favorites", favoritesCtrl);
 
 app.get("/", function(req, res) {
   res.render("index");
@@ -40,7 +42,7 @@ app.get("/", function(req, res) {
   // console.log("this user was just create: ", user.firstName);
   // createdUser.lastName = "Bridgpal"
   // createdUser.save();
-  createdUser.set("date", "ININSIDE HEROK ZACH").save();
+  createdUser.set("date", "wtf tho").save();
   // res.render("someTemplate", {user: user});
 });
 

@@ -9,10 +9,15 @@
       How UN-rotten is this movie?
       </a></td>
       <td> <%= tomatoMeter %> </td>
-    </td>
+
 </tr>
+<tr><td><h4><%= Plot %></h4></td></tr>
 
-
+<tr><td><h4><form action="../favorites/<%= imdbID %>" method="get">
+<input type="hidden" name="favorite" value="yes">
+<input type="hidden" name="movieTitle" value="<%= Title %>">
+<input type="hidden" name="imdbID" value="<%= imdbID %>"><button type="submit" class="btn btn-default delete-link">add to watch list</button>
+</form></h4></td></tr>
 
 
 
@@ -28,5 +33,9 @@
 <div class="col-sm-4">
 <img src="<%= Poster %>">
 </div>
-
+<div class="col-sm-4">
+&nbsp;
+</div>
+<div class="col-sm-12">
 <% include ../partials/footer %>
+</div>

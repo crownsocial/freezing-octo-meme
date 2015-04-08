@@ -41,6 +41,12 @@ router.get("/:imdbId", function(req, res) {
 });
 
 
+router.post('/',function(req,res){
+  // db.movie.create(req.body).then(function(data){
+    res.send("helloW!!");
+  // })
+});
+
 // request('http://www.google.com', function (error, response, body) {
 //   if (!error && response.statusCode == 200) {
 //     console.log(body) // Show the HTML for the Google homepage.

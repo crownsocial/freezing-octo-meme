@@ -10,14 +10,12 @@ $(function(){
       var myUrl = $(this).attr('href');
       $.ajax({
         method:'DELETE',
-        url:myUrl
+        url: "../favorites"
       }).done(function(data){
         //reload page!!! OR...
 
         //just remove the row from the DOM
-        delBtn.closest('tr').fadeOut('slow',function(){
-          $(this).remove();
-        })
+        delBtn.removeClass('delete-link');
       });
     }
   });
