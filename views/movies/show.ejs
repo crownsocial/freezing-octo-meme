@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+<h1><%= Title %></h1>
+<!-- Here are the movies btw: -->
+<div class="col-sm-4">
+<table class="table">
+
+<tr>
+    <td>
+      How UN-rotten is this movie?
+      </a></td>
+      <td> <%= tomatoMeter %> </td>
+    </td>
+</tr>
+
+
+
+
+
+</table>
+
+<!-- <form class="form" action="/movies" method="get">
+<div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="search for a movie">
+  </div>
+  <input type="submit" value="search" class="btn btn-primary">
+  </form> -->
+</div>
+<div class="col-sm-4">
+<img src="<%= Poster %>">
+</div>
+
+<% include ../partials/footer %>

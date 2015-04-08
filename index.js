@@ -1,6 +1,7 @@
 //load dependencies
 var express = require('express');
 var bodyParser = require('body-parser');
+var moviesCtrl = require("./controllers/movies");
 var db = require("./models");
 var router = express.Router();
 //dependency for scraping sites
@@ -26,10 +27,14 @@ app.use(bodyParser.urlencoded({extended:false}));
 // app.use('/',require('./controllers/main.js'));
 // app.use('/articles',require('./controllers/articles.js'));
 
+app.use("/movies", moviesCtrl);
 
 app.get("/", function(req, res) {
-  res.send("Hello!");
+  res.render("index");
 });
+// app.get("/", function(req, res) {
+//   res.send("Hello!");
+// });
 
   db.movie.create({movieTitle: "THISHAPPENED"}).then(function(createdUser) {
   // console.log("this user was just create: ", user.firstName);
@@ -39,13 +44,16 @@ app.get("/", function(req, res) {
   // res.render("someTemplate", {user: user});
 });
 
-db.movie.findOrCreate({where: {movieTitle: "SPECIALSPACEMAN"}}).spread(function(foundUser, created) {
+db.movie.findOrCreate({where: {movieTitle: "SPECIALSPACEMAN"}})
+.spread(function(foundUser, created) {
   console.log(foundUser.get());
   console.log(created);
 }).catch(function(error) {
   console.log("something happened");
   console.log(error);
 })
+
+// movie.createOthertable()
 
 // // database write, read
 // _POST
