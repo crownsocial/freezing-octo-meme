@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
+var db = require("../../models");
 
 
 router.get("/", function(req,res) {
@@ -10,6 +11,13 @@ router.get("/", function(req,res) {
     if (!error && response.statusCode == 200) {
       var movieData = JSON.parse(data);
     // res.send(movieData.Search[0]);
+      db.movie.create({movieTitle: "IN HEROKU"}).then(function(createdUser) {
+  // console.log("this user was just create: ", user.firstName);
+  // createdUser.lastName = "Bridgpal"
+  // createdUser.save();
+  createdUser.set("date", "ININSIDE HEROK ZACH").save();
+  // res.render("someTemplate", {user: user});
+});
     res.render("movies/index", movieData);
 
   }
